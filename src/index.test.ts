@@ -27,8 +27,8 @@ describe('Testing app', () => {
     })
     const status = res.status
     const body = await res.text()
-    expect(status).toBe(200)
-    expect(body).toBe('unauthorized page!!')
+    expect(status).toBe(403)
+    expect(body).toBe('Blocking access from 192.168.1.1')
   })
 
   it('root path', async () => {
