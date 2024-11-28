@@ -5,6 +5,7 @@ import { ipRestriction } from 'hono/ip-restriction'
 
 const app = new Hono()
 
+// 特定ページについてIP制限
 app.use(
   '/admin/*',
   ipRestriction(
